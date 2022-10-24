@@ -1,0 +1,62 @@
+{% extends 'ProyectoWebApp/base.html' %}
+
+{% load static %}
+
+{% block content %}
+    
+    <!--Contenido Cambiante-->
+    <div class="card mb-6">
+        <img src="{% static 'ProyectoWebApp/img/truck_tracking.png' %}" class="img-fluid rounded mx-auto d-block" alt="...">
+        <div class="card-body">
+            <!--- Barra buscadora de código de rastreo -->
+            <nav class="navbar navbar-light bg-light">
+                <div class="container-fluid">
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Número de tracking" aria-label="Buscar">
+                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </nav>
+        
+        </div>
+      </div>
+
+    <br>
+    <!--- Resultados de rastreo por código indicado -->
+    <div class="container-fluid">
+        <article class="card mb-6">
+            <header class="card-header"> Mis ordenes y seguimiento </header>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Número de Pedido</th>
+                        <th scope="col">Fecha Compra</th>
+                        <th scope="col">Enviar a</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Total Compra</th>
+                        <th scope="col">Detalle</th>     
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">21354</th>
+                        <td>10/07/2022</td>
+                        <td>Usuario</td>
+                        <td>En preparación</td>
+                        <td>$ 100.000-.</td>
+                        <td><a href="#">Ver detalle</a></td>
+                        
+                      </tr>
+                 
+                    </tbody>
+                  </table>
+
+
+            </div>
+                
+        </article>
+    </div>
+    <div class="b-example-divider"></div>
+
+    {% endblock %}
